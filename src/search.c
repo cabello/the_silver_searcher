@@ -151,7 +151,7 @@ void search_file(const pcre *re, const pcre_extra *re_extra, const char *file_fu
             goto cleanup;
         }
 
-        buf = mmap(0, f_len, PROT_READ, MAP_SHARED, fd, 0);
+        buf = mmap(0, f_len, PROT_READ, MAP_PRIVATE, fd, 0);
         if (buf == MAP_FAILED) {
             log_err("File %s failed to load: %s.", file_full_path, strerror(errno));
             goto cleanup;
