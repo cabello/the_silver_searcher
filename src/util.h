@@ -33,7 +33,7 @@ void generate_skip_lookup(const char *find, size_t f_len, size_t skip_lookup[], 
 char* boyer_moore_strnstr(const char *s, const char *find, const size_t s_len, const size_t f_len, const size_t skip_lookup[]);
 char* boyer_moore_strncasestr(const char *s, const char *find, const size_t s_len, const size_t f_len, const size_t skip_lookup[]);
 
-int scandir_wrap(const char *path, struct dirent ***dir_list, int (*filter)(struct dirent *));
+int scandir_wrap(const char *path, struct dirent ***dir_list, int (*filter)(const char*, struct dirent *));
 
 int invert_matches(match matches[], int matches_len, const int buf_len);
 
