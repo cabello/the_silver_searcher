@@ -68,6 +68,10 @@ char* boyer_moore_strncasestr(const char *s, const char *find, const size_t s_le
     return NULL;
 }
 
+int scandir_wrap(const char *path, struct dirent ***dir_list, int (*filter)(struct dirent *)) {
+    return 0;
+}
+
 int invert_matches(match matches[], int matches_len, const int buf_len) {
     int i;
 
